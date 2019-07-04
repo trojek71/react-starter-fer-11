@@ -21,4 +21,3 @@ export default Hero;
 
 
 
-//src="https://i.postimg.cc/rFjRP1TR/space.png"
