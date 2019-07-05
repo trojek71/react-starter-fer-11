@@ -6,6 +6,7 @@ import ReactHtmlParser from 'react-html-parser';
 
 
 
+
 const Card = props =>(
       
   
@@ -16,10 +17,7 @@ const Card = props =>(
     </section>
 );      
 
-Card.propTypes = {
-    title: PropTypes.node,
-    
-  };
+
 
 
 

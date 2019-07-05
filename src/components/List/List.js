@@ -15,6 +15,7 @@ class List extends React.Component {
       description: PropTypes.node,
       columns: PropTypes.array,
       image: PropTypes.string,
+      cards: PropTypes.node,
      
     }
     state = {
