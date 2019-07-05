@@ -13,9 +13,7 @@ class List extends React.Component {
       description: PropTypes.node,
       columns: PropTypes.array,
       image: PropTypes.string,
-      colTitle1: PropTypes.node.isRequired,
-      colTitle2: PropTypes.node.isRequired,
-      colTitle3: PropTypes.node.isRequired,
+     
     }
     state = {
       columns: this.props.columns || [],
@@ -33,9 +31,9 @@ class List extends React.Component {
                 {ReactHtmlParser(this.props.description)}
         </div>
         <div className={styles.columns}>
-          <Column titleText={this.props.colTitle1}></Column>
-          <Column titleText={this.props.colTitle2}></Column>
-          <Column titleText={this.props.colTitle3}></Column>
+        {this.state.columns.map(({key, ...columnProps}) => (
+        <Column key={key} {...columnProps} />
+            ))}
         </div>
         
         </section>

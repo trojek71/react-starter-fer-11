@@ -6,14 +6,14 @@ import ReactHtmlParser from 'react-html-parser';
 const Column = props =>(
     
     <section className={styles.component}>
-       <h3 className={styles.title}>{ReactHtmlParser(props.titleText)}</h3> 
+       <h3 className={styles.title}>{ReactHtmlParser(props.title)}</h3> 
     </section>
 
 
 );      
 
 Column.propTypes = {
-    titleText: PropTypes.node.isRequired,
+    title: PropTypes.node.isRequired,
     
   };
 
