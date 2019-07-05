@@ -7,14 +7,12 @@ import Card from  '../Card/Card.js'
 
 
 
-
   const Column = props =>(
-  
-  
-
+      
+   
     <section className={styles.component}>
        <h3 className={styles.title}>{ReactHtmlParser(props.title)}</h3> 
-     
+       <Card className={styles.title}>{ReactHtmlParser(props.title)}</Card>
     </section>
 );      
 
@@ -22,7 +20,9 @@ import Card from  '../Card/Card.js'
 
 Column.propTypes = {
     title: PropTypes.node.isRequired,
-   
+    description: PropTypes.node,
+    columns: PropTypes.array,
+    cards:PropTypes.array,
   };
 
 
