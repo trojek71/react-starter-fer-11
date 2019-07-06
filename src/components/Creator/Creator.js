@@ -53,7 +53,7 @@ class Creator extends React.Component {
           onChange={event => this.handleChange(event)}
         />
         <div className={styles.buttons + (this.state.visibleButtons ? ' ' + styles.buttonsShown : '')}>
-          <Button onClick={() => this.handleOK((window.confirm('Create Column '+ this.state.value + '?')))}>OK</Button>
+          <Button onClick={() => this.handleOK((window.confirm('Create  '+ this.state.value + '?')))}>OK</Button>
         
           <Button onClick={() => this.handleCancel((window.confirm("Do you really want to leave?")))} variant='danger'>cancel</Button>
           
