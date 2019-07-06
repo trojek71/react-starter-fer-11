@@ -3,8 +3,9 @@ import styles from './Column.scss';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import Card from  '../Card/Card.js'
-import {pageContents, listData,settings} from '../../data/dataStore';
+import {settings} from '../../data/dataStore';
 import Creator from './../Creator/Creator.js';
+import Icon from './../Icon/Icon';
 
 
 
@@ -15,6 +16,9 @@ class Column extends React.Component{
     description: PropTypes.node,
     columns: PropTypes.array,
     cards:PropTypes.array,
+    icon:PropTypes.node,
+    name:PropTypes.node,
+    
    }
 
    state = {
@@ -41,11 +45,15 @@ class Column extends React.Component{
 
 render(){
 return(
-  
-   
         
-
     <section className={styles.component}>
+       <div>
+         <h3 className={styles.title}>{ReactHtmlParser(this.props.title)}
+         <span ><Icon name={ReactHtmlParser(this.props.icon)}></Icon></span>
+         </h3>
+         
+       </div>
+
        <div className={styles.creator}>
           <Creator text={settings.cardsCreatorText} action={title => this.addCard(title)}/>
         </div>
