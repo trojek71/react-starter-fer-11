@@ -7,7 +7,8 @@ class Creator extends React.Component {
   static propTypes = {
     text: PropTypes.string,
     title: PropTypes.string,
-    image: PropTypes.string
+    image: PropTypes.string,
+    action: PropTypes.node.isRequired,
   }
 
   static defaultProps = {
@@ -23,7 +24,7 @@ class Creator extends React.Component {
     // console.log(event);
     this.setState({
       value: event.target.value,
-      visibleButtons: event.target.value.length > 0
+      visibleButtons: event.target.value.length > 0,
     });
   }
 
@@ -32,7 +33,7 @@ class Creator extends React.Component {
       this.props.action(this.state.value);
       this.setState({
         value: '',
-        visibleButtons: false
+        visibleButtons: false,
       });
     }
   }
@@ -40,7 +41,7 @@ class Creator extends React.Component {
   handleCancel(){
     this.setState({
       value: '',
-      visibleButtons: false
+      visibleButtons: false,
     });
   }
 
@@ -56,7 +57,7 @@ class Creator extends React.Component {
         <div className={styles.buttons + (this.state.visibleButtons ? ' ' + styles.buttonsShown : '')}>
           <Button onClick={() => this.handleOK((window.confirm('Create  '+ this.state.value + '?')))}>OK</Button>
         
-          <Button onClick={() => this.handleCancel((window.confirm("Do you really want to leave?")))} variant='danger'>cancel</Button>
+          <Button onClick={() => this.handleCancel((window.confirm('Do you really want to leave?')))} variant='danger'>cancel</Button>
          
         </div>
        
