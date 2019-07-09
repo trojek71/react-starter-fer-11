@@ -20,6 +20,7 @@ export const listData = {
   title: 'Things to do <sup>soon!</sup>',
   description: 'Interesting things I want to check out!',
   image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  newListImage:'https://i.postimg.cc/Qt7mbcVt/to-do-734587-1920.jpg',
   key:0,
   columns: [
     {

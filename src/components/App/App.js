@@ -11,7 +11,7 @@ class App extends React.Component {
   static propTypes = {
       
       title: PropTypes.node,
-      
+      image: PropTypes.string,
       
    
   }
@@ -32,7 +32,7 @@ class App extends React.Component {
             {
               key: state.lists.length ? state.lists[state.lists.length-1].key+1 : 1,
               title,
-              
+              image:listData.newListImage,
             }
           ]
         }
