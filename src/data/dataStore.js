@@ -1,6 +1,7 @@
 export const settings = {
   columnCreatorText: 'Add new column',
   cardCreatorText: 'Add new card',
+  listCreatorText:'Add new list',
   creator: {
     buttonOK: 'OK',
     buttonCancel: 'Cancel',
@@ -19,6 +20,7 @@ export const listData = {
   title: 'Things to do <sup>soon!</sup>',
   description: 'Interesting things I want to check out!',
   image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  key:0,
   columns: [
     {
       key: 0,

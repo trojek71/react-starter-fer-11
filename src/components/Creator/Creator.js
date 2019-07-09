@@ -7,6 +7,7 @@ class Creator extends React.Component {
   static propTypes = {
     text: PropTypes.string,
     title: PropTypes.string,
+    image: PropTypes.string
   }
 
   static defaultProps = {
@@ -56,8 +57,9 @@ class Creator extends React.Component {
           <Button onClick={() => this.handleOK((window.confirm('Create  '+ this.state.value + '?')))}>OK</Button>
         
           <Button onClick={() => this.handleCancel((window.confirm("Do you really want to leave?")))} variant='danger'>cancel</Button>
-          
+         
         </div>
+       
       </div>
     );
   }
