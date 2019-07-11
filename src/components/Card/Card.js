@@ -6,12 +6,12 @@ import PropTypes from 'prop-types';
 
 
 
-const Card = props =>(
-      
+const  Card = ({title}) =>(
+  
   
 
   <section className={styles.component}>
-    <div className={styles.title}>{ReactHtmlParser(props.title)}
+    <div className={title}>{ReactHtmlParser(title)}
     </div>    
   </section>
 );      

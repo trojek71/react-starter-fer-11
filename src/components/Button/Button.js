@@ -8,8 +8,8 @@ const Button = ({variant = '', ...otherProps}) => (
     className={styles.component + variant.split(' ').map(name => ' ' + (styles[name] || name)).join('')}
   />
 );
-Button.propTypes = {
-  variant: PropTypes.node.isRequired ,
+Button.propTypes= {
+  variant: PropTypes.node.isRequired,
 };
 
 export default Button;
