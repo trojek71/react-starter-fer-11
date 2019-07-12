@@ -24,6 +24,8 @@ class Column extends React.Component{
    
    static defaultProps = {
      description: settings.cardCreatorText,
+     icon: settings.defaultColumnIcon,
+
    }
    componentDidMount(){
      console.log(this.props);
