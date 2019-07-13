@@ -6,18 +6,19 @@ export const countVisibleCards = ({cards,searchString}) => cards.filter(card => 
 export const countAllCards = ({cards}) => cards.length;
 // action name creator
 const reducerName = 'search';
-const createAction_changeSearchString = name => `app/${reducerName}/${name}`;
+const createActionName = name => `app/${reducerName}/${name}`;
 // actions types
-export const CHANGE = createAction_changeSearchString('CHANGE');
+export const CHANGE = createActionName('CHANGE');
 // action creators
 export const createAction_searchString = payload => ({ payload, type: CHANGE });
 // reducer
-export default function reducer(statePart = '', action = {CHANGE}) {
+export default function reducer(statePart = '', action = {}) {
   switch (action.type) {
     case CHANGE:
       return  [...statePart, { ...action.payload, id: shortid.generate() }];
     default: 
       return statePart;
+      
   }
 }
 

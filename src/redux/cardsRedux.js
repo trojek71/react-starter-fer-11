@@ -6,7 +6,7 @@ export const getCardsForColumn = ({cards,searchString}, columnId) => cards.filte
 // action name creator
 const reducerName = 'cards';
 const createActionName = name => `app/${reducerName}/${name}`;
-console.log(name);
+
 // action types
 export const ADD_CARD = createActionName('ADD_CARD');
 

@@ -13,7 +13,7 @@ class App extends React.Component {
     title: PropTypes.node,
     subtitle: PropTypes.node,
     lists: PropTypes.array,
-    Search: PropTypes.node,
+    Search,
   }
 
     state = {
