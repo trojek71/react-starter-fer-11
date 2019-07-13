@@ -4,7 +4,7 @@ import List from '../List/ListContainer';
 //import {listData} from '../../data/dataStore';
 //import Creator from './../Creator/Creator.js';
 import PropTypes from 'prop-types';
-
+import Search from './../Search/SearchContainer';
 
 
 class App extends React.Component {
@@ -13,6 +13,7 @@ class App extends React.Component {
     title: PropTypes.node,
     subtitle: PropTypes.node,
     lists: PropTypes.array,
+    Search,
   }
 
     state = {
@@ -45,10 +46,11 @@ class App extends React.Component {
         <main className={styles.component}>
           <h1 className={styles.title}>{title}</h1>
           <h2 className={styles.subtitle}>{subtitle}</h2>
+          <Search ></Search> 
           {lists.map(listData => (
             <List key={listData.id} {...listData} />
           ))}
-          
+         
           {/*
           <List {...listData} /> 
           <div className={styles.creator}>
