@@ -13,7 +13,7 @@ class App extends React.Component {
     title: PropTypes.node,
     subtitle: PropTypes.node,
     lists: PropTypes.array,
-    Search,
+    Search: PropTypes.node,
   }
 
     state = {
@@ -46,7 +46,7 @@ class App extends React.Component {
         <main className={styles.component}>
           <h1 className={styles.title}>{title}</h1>
           <h2 className={styles.subtitle}>{subtitle}</h2>
-          <Search ></Search> 
+          <Search >{Search}</Search> 
           {lists.map(listData => (
             <List key={listData.id} {...listData} />
           ))}

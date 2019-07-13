@@ -5,12 +5,12 @@ export const getSearchString= ({cards}, columnId) => cards.filter(card => (card.
 export const countVisibleCards = ({cards,searchString}) => cards.filter(card => new RegExp(searchString, 'i').test(card.title)).length;
 export const countAllCards = ({cards}) => cards.length;
 // action name creator
-const reducerName = 'cards';
-const createActionName = name => `app/${reducerName}/${name}`;
+const reducerName = 'search';
+const createAction_changeSearchString = name => `app/${reducerName}/${name}`;
 // actions types
-export const CHANGE = createActionName('CHANGE');
+export const CHANGE = createAction_changeSearchString('CHANGE');
 // action creators
-export const createAction_addCard = payload => ({ payload, type: CHANGE });
+export const createAction_searchString = payload => ({ payload, type: CHANGE });
 // reducer
 export default function reducer(statePart = '', action = {CHANGE}) {
   switch (action.type) {
