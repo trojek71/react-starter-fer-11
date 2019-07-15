@@ -1,9 +1,11 @@
-import shortid from 'shortid';
+
 
 // selectors
-export const getSearchString= ({cards}) => cards.searchString;
+export const getSearchString= ({searchString}) => searchString;
+console.log(getSearchString);
 export const countVisibleCards = ({cards},searchString) => cards.filter(card => new RegExp(searchString, 'i').test(card.title)).length;
 export const countAllCards = ({cards}) => cards.length;
+console.log(length);
 // action name creator
 const reducerName = 'search';
 const createActionName = name => `app/${reducerName}/${name}`;
@@ -15,7 +17,7 @@ export const createAction_changeSearchString = payload => ({ payload, type: CHAN
 export default function reducer(statePart = '', action = {}) {
   switch (action.type) {
     case CHANGE:
-      return  [...statePart, { ...action.payload, id: shortid.generate() }];
+      return  action.payload ;
     default: 
       return statePart;
       
