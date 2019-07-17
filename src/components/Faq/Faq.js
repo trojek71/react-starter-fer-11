@@ -7,7 +7,7 @@ const Faq = () => (
   <Container>
     <h2>Faq</h2>
     <p>Kilka Pytań bez odpowiedzi.....</p>
-    <Hero titleText={pageContents.title} title={pageContents.subtitle} image={listData.image} />
+    <Hero titleText={pageContents.title} title={pageContents.subtitle} image={listData.newListImage} />
   </Container>
 );
 
