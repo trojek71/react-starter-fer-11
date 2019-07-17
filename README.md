@@ -1,1 +1,1 @@
-# react-starter-fer-11
+# https://trojek-redux.herokuapp.com/
