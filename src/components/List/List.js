@@ -50,7 +50,7 @@ class List extends React.Component {
             <div className={styles.description}>
               {ReactHtmlParser(description)}
             </div>
-          
+            
             <div className={styles.creator}>
               <Creator text={settings.columnCreatorText} action={addColumn}/>
             </div>

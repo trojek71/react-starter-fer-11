@@ -35,7 +35,7 @@ class Search extends React.Component {
     this.props.changeSearchString(this.state.value);
   }
 
-  componentWillReceiveProps(newProps){
+  UNSAFE_componentWillReceiveProps(newProps){
     this.setState({value: newProps.searchString});
   }
 
@@ -52,16 +52,17 @@ class Search extends React.Component {
             value={value}
             onChange={event => this.handleChange(event)}
           />
-       
+          
           <div className={styles.buttons}>
             <Button onClick={() => this.handleOK()}><Icon name={icon} /></Button>
           </div>
-        </ Container>
+        </Container>
         <div>
           { countVisible == countAll ? '' : `${countVisible} / ${countAll}` }
         </div>
-       
+        
       </div>
+      
     );
   }
 }
