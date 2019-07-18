@@ -24,6 +24,10 @@ class SearchResult extends React.Component{
       icon: settings.defaultColumnIcon,
    
     }
+
+    componentDidMount(){
+      console.log(this.props);
+    }
     render(){
       const {title, icon,cards} = this.props; 
       return(
