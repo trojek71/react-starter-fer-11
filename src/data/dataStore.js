@@ -18,7 +18,12 @@ export const pageContents = {
   title: 'My first React app',
   subtitle: 'A simple to-do app, with lists, columns and cards',
 };
-
+export const pageData={
+  faqImage:'https://i.postimg.cc/fLshbZM3/question-mark-1872665-1920.jpg',
+  infoImage:'https://i.postimg.cc/tJVfdMR0/overcoming-2127669-1920.png',
+  faqTitle:'Wot do You want to know ?',
+  infoTitle:'About Me',
+};
 export const listData = {
   title: 'Things to do <sup>soon!</sup>',
   description: 'Interesting things I want to check out!',
