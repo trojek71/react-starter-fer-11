@@ -6,7 +6,7 @@ import Card from  '../Card/Card.js';
 import {settings} from '../../data/dataStore';
 import Creator from './../Creator/Creator.js';
 import Icon from './../Icon/Icon';
-//import { addCard } from '../../redux/cardsRedux';
+
 
 
 
@@ -25,7 +25,7 @@ class Column extends React.Component{
 
    
    static defaultProps = {
-     //description: settings.cardCreatorText,
+    
      icon: settings.defaultColumnIcon,
 
    }
