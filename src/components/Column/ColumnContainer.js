@@ -10,6 +10,7 @@ const mapDispatchToProps = (dispatch, props) => ({
 });
 const mapStateToProps = (state, props) => ({
   cards: getCardsForColumn(state, props.id),
+  
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(Column);

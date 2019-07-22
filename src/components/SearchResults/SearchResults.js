@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import Card from  '../Card/Card.js';
 import {settings} from '../../data/dataStore';
-import Container from './../Container/Container';
-import Icon from './../Icon/Icon';
+import Container from '../Container/Container';
+import Icon from '../Icon/Icon';
 
 
-class SearchResult extends React.Component{
+
+
+class SearchResults extends React.Component{
     static propTypes = {
       title: PropTypes.node,
       description: PropTypes.node,
@@ -16,6 +18,7 @@ class SearchResult extends React.Component{
       cards:PropTypes.array,
       icon:PropTypes.node,
       name:PropTypes.node,
+      lists:PropTypes.node,
       
      
     }
@@ -26,14 +29,40 @@ class SearchResult extends React.Component{
     }
     
     componentDidMount(){
-      console.log(this.props);  
+      console.log(this.state.value);  
     }
+    static defaultProps = {
     
+      icon: settings.defaultColumnIcon,
+ 
+    }
+    addCard(title){
+      this.setState(state => (
+        {
+          cards: [
+            ...state.cards,
+            {
+              key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
+              title,
+ 
+            },
+          ],
+        }
+      ));
+    }
+ 
+ 
+
+
+
+
+
     render(){
       
       const {title, icon,cards} = this.props; 
       return(
         <Container>   
+         
           <section className={styles.component}>
             
             <div>
@@ -51,6 +80,7 @@ class SearchResult extends React.Component{
             </div>
            
           </section>
+         
         </Container>
       );     
    
@@ -61,4 +91,4 @@ class SearchResult extends React.Component{
 
 
 }
-export default SearchResult;
+export default SearchResults;
